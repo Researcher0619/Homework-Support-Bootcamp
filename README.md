@@ -35,11 +35,15 @@ Uygulamanın dış dünyadan erişilebilir olmasını sağlamak için Kubernetes
 
 Servislerin durumunu kontrol etmek ve dış IP adresini görmek için şu komutu çalıştırın:
 
-    ...bash
-    kubectl get services
+3. Uygulamanın Çalıştığını Doğrulama
+
+       ...bash
+       kubectl get services
 
 Çıktıda görünen External IP adresini tarayıcınızda açarak uygulamanın doğru bir şekilde çalıştığını doğrulayabilirsiniz.
-Uygulama Ölçeklendirme
+
+4.Uygulama Ölçeklendirme
+
 Uygulamanın kapasitesini artırmak için pod sayısını çoğaltabilirsiniz. Bunun için deployment.yaml dosyasındaki replicas değerini artırın ve ardından değişiklikleri uygulayın:
 
     ...bash
@@ -50,5 +54,7 @@ Uygulamanın kapasitesini artırmak için pod sayısını çoğaltabilirsiniz. B
 Dosyaların Açıklamaları
 
 deployment.yaml: Kubernetes üzerinde Flask uygulamanız için pod'ların nasıl oluşturulacağını belirler.
+
 service.yaml: Uygulamanın Kubernetes ortamında erişilebilir olmasını sağlar ve dış bağlantılara izin verir.
+
 Bu README dosyası, basit bir Flask web uygulamasının Kubernetes ortamında nasıl dağıtılacağını adım adım açıklamaktadır. Proje, Docker Hub'da bulunan Docker imajını kullanır, bu yüzden odak noktası yalnızca Kubernetes dağıtımıdır.
